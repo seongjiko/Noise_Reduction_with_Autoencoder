@@ -15,3 +15,12 @@
   - 학습 결과 이미지화
 - latent size: 7*7 --> 14*14로 변경
   - 데이터 손실이 너무 컸음
+- 정상적으로 학습 완료
+
+## 4. 2021.12.07
+- 이미지 노이즈 추가.
+  - ```python
+    train_noisy.append(sample_Image[i].cpu().numpy() + noise_force * np.random.normal(loc=0.0, scale=1.0, size=sample_Image[i].shape))
+    ```
+    - noise_force : 0.2
+- 노이즈 제거 모델 구현중.. 구현이 완료되면 추가기능을 제공해볼 
