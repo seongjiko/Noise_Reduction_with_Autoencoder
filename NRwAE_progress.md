@@ -23,4 +23,5 @@
     train_noisy.append(sample_Image[i].cpu().numpy() + noise_force * np.random.normal(loc=0.0, scale=1.0, size=sample_Image[i].shape))
     ```
     - noise_force : 0.2
+- learning_rate: 2e-4로 변경, 무난히 학습이 잘되는 수치
 - 노이즈 제거 모델 구현중.. 구현이 완료되면 추가기능을 제공해볼 
