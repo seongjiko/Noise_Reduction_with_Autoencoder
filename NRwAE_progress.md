@@ -25,3 +25,8 @@
     - noise_force : 0.2
 - learning_rate: 2e-4로 변경, 무난히 학습이 잘되는 수치
 - 노이즈 제거 모델 구현중.. 구현이 완료되면 추가기능을 제공해볼 
+
+## 5. 2021.12.08
+- 기존 선형 오토인코더 에서 `UNet`으로 변환, 노이즈 제거 후 성능 향상을 위함
+  - 참고: https://www.youtube.com/watch?v=sSxdQq9CCx0&t=329s
+- transform 재구성
