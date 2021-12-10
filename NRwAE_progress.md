@@ -30,3 +30,28 @@
 - 기존 선형 오토인코더 에서 `UNet`으로 변환, 노이즈 제거 후 성능 향상을 위함
   - 참고: https://www.youtube.com/watch?v=sSxdQq9CCx0&t=329s
 - transform 재구성
+
+## 6. 2021.12.09
+- 오류 폭탄,, 해결하는데 많은 시간이 들었음
+- 일단 단순 이미지 재 구성은 완벽하게 동작, (UNet, MSELoss함수, Adam함수 사용)
+- 그런데 노이즈 제거 결과가 매우 이상함 
+- ![image](https://user-images.githubusercontent.com/46768743/145506513-77f3d78d-8817-40ca-ac4d-2547c3f48ae8.png)
+
+  - Loss는 낮은데 왜,, 설마 MSELoss로 측정하면 안되나..?
+
+## 7. 2021.12.10
+- 노이즈 제거 결과가 이상한 이유 예측
+  - 1. transpose가 잘못 진행되어 이미지가 90도 전환됨. 그럼 당연히 이상하게나오지!
+    - ![image](https://user-images.githubusercontent.com/46768743/145506553-96b478c9-a5b0-4cfa-b850-219b83b6b383.png)
+      - 이 사진을 보고 파악완료. 다 죽었어
+
+    - ![image](https://user-images.githubusercontent.com/46768743/145506659-72ad2c0a-2908-49f1-9223-e50c9d534f5d.png)
+      - 50 에포크 노이즈 제거 결과. 오? 학습을 더 진행해봐야겠다.
+
+    - ![image](https://user-images.githubusercontent.com/46768743/145507147-26a564e5-9004-4730-b840-c25a7d23dd4b.png)
+      - 200 에포크 노이즈 제거 결과. 빨간 부분의 노이즈가 작아지긴 하는데 완벽하지않다. 학습횟수의 문제가 아닌듯.
+  - 2. MSELoss에 대한 고찰 
+    - MSELoss는 각 픽셀마다의 거리를 측정하기 때문에 사진 처럼 다른 부분을 최대한 비스무리하게 만드는 대신 오차들을 한곳에 모으는 현상이 발생할 수도 있을 듯.  
+    - Loss Functions for Image Restoration with Neural Networks (IEEE TMI 2016)
+    - 위 논문을 참고하니 SIMM Loss가 노이즈를 제거하는데 가장 좋은 로스지표가 된다는 것을 확인하였다. 사실 SIMM LOSS와 L1 Loss를 혼합했을때 가장 높은 퍼포먼스를 보인다고 하지만 일단 SIMMLoss만 적용시켜본다.
+  - 
