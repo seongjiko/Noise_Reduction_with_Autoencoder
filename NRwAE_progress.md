@@ -53,5 +53,5 @@
   - 2. MSELoss에 대한 고찰 
     - MSELoss는 각 픽셀마다의 거리를 측정하기 때문에 사진 처럼 다른 부분을 최대한 비스무리하게 만드는 대신 오차들을 한곳에 모으는 현상이 발생할 수도 있을 듯.  
     - Loss Functions for Image Restoration with Neural Networks (IEEE TMI 2016)
-    - 위 논문을 참고하니 SIMM Loss가 노이즈를 제거하는데 가장 좋은 로스지표가 된다는 것을 확인하였다. 사실 SIMM LOSS와 L1 Loss를 혼합했을때 가장 높은 퍼포먼스를 보인다고 하지만 일단 SIMMLoss만 적용시켜본다.
+    - 위 논문을 참고하니 SSIM Loss가 노이즈를 제거하는데 가장 좋은 로스지표가 된다는 것을 확인하였다. 사실 SSIM LOSS와 L1 Loss를 혼합했을때 가장 높은 퍼포먼스를 보인다고 하지만 일단 SSIMLoss만 적용시켜본다.
   - 
