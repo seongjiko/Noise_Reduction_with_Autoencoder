@@ -8,7 +8,10 @@
   - ![image](https://user-images.githubusercontent.com/46768743/145661933-190ca233-a0b6-4335-8933-0d56689f2c1c.png)
   - `이미지 출처: https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html`
   - 이를 알고 원본 사진에 노이즈를 주더라도 오토인코더를 이용하면 다시 원본 사진으로 복원할 수 있겠다라는 점에서 프로젝트를 진행하게 되었다.
-  
+
+## 프로젝트 결과 예시
+  ![image](https://user-images.githubusercontent.com/46768743/145662645-73c1c250-9c95-485f-b349-98a350eb42ee.png)
+
 - 데이터 셋은 양이 그렇게 많지 않아도 되기 때문에 FingerNumber_classifier 프로젝트에서 사용한 데이터 셋을 가져왔다.
   - <img width="300" alt="image" src="https://user-images.githubusercontent.com/46768743/142755240-0e1a3570-e740-434a-b3e5-99a1cc9eb99d.png"> <img width="300" alt="image" src="https://user-images.githubusercontent.com/46768743/142755325-8dd0e747-12f8-4458-96fc-36a9dde59f0c.png">
   
