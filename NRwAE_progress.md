@@ -61,3 +61,4 @@
       - 결과는 ipynb 파일을 참고하자. 
     - 사실 특정 부분의 노이즈(ex. 낙서 등)이 아니라 모든 픽셀에 대해 노이즈를 줬기 때문에 컴퓨터 입장에서는 매우 큰 이미지 손실일 것이다.
   - 5. 프로그램 완성.
+    -  <img width="1294" alt="image" src="https://user-images.githubusercontent.com/46768743/145936199-b9f374e5-8c29-45ed-95a7-fb941fb2f561.png">
