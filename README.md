@@ -7,6 +7,9 @@
 - 수업에서 오토인코더에 대해 배우게 되었는데. 이미지를 축소하여 특징들을 추려낸 후(인코더), 그 특징들을 토대로 이미지를 재구성(디코더) 할 수 있다.
   - ![image](https://user-images.githubusercontent.com/46768743/145661933-190ca233-a0b6-4335-8933-0d56689f2c1c.png)
   - `이미지 출처: https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html`
+  - 하지만 단순한 오토인코더로는 제대로된 복원이 불가능하여 UNet구조를 사용하였다.
+  <img width="393" alt="image" src="https://user-images.githubusercontent.com/46768743/145936440-6d4014ec-19bf-4c70-93a7-f802f0fb5a46.png">
+
   - 이를 알고 원본 사진에 노이즈를 주더라도 오토인코더를 이용하면 다시 원본 사진으로 복원할 수 있겠다라는 점에서 프로젝트를 진행하게 되었다.
 
 ## 프로젝트 결과 예시
